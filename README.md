@@ -6,12 +6,12 @@ List of Design Patterns -
 
 Creational design patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed, and represented.
 
-> Abstract Factory
-> Factory
-> Builder
-> Prototype
-> Singelton
-> Multiton
+> Abstract Factory::
+> Factory::
+> Builder::
+> Prototype::
+> Singelton::
+> Multiton::
 > Object Pool
 
 **Structural Patterns**
