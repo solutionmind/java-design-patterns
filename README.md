@@ -6,84 +6,84 @@ List of Design Patterns -
 
 Creational design patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed, and represented.
 
-> Abstract Factory::
-> Factory::
-> Builder::
-> Prototype::
-> Singelton::
-> Multiton::
+> Abstract Factory,
+> Factory,
+> Builder,
+> Prototype,
+> Singelton,
+> Multiton,
 > Object Pool
 
 **Structural Patterns**
 
 Structural patterns are concerned with how classes and objects are composed to form larger structures.
 
-> 	Facade
-> Adapter
-> Bridge
-> Composite
-> Decorator
->  Flyweight
-> 	Proxy
-> Service Locator
-> Servant
+> 	Facade,
+> Adapter,
+> Bridge,
+> Composite,
+> Decorator,
+>  Flyweight,
+> Proxy,
+> Service Locator,
+> Servant,
 > Event Aggregator
 
 **Behavioral Patterns**
 
 Behavioral patterns are concerned with algorithms and the assignment of responsibilites between objects.
 
-> Chain of responsibility 
-> Command 
-> Interpreter 
-> Iterator
-> Mediator
-> Memento 
-> Observer 
-> State 
-> Strategy
-> Template method
-> Visitor
-> Null Object 
-> Intercepting Filter 
-> Specification 
-> Dependency
+> Chain of responsibility, 
+> Command, 
+> Interpreter, 
+> Iterator,
+> Mediator,
+> Memento, 
+> Observer, 
+> State, 
+> Strategy,
+> Template method,
+> Visitor,
+> Null Object, 
+> Intercepting Filter, 
+> Specification, 
+> Dependency,
 > Injection
 
 **Concurrency Patterns**
 
 Concurrency patterns are those types of design patterns that deal with the multi-threaded programming paradigm.
 
-> Double Checked Locking 
+> Double Checked Locking, 
 > Thread Pool
 
 **Presentation Tier Patterns**
 
 Presentation Tier patterns are the top-most level of the application, this is concerned with translating tasks and results to something the user can understand.
 
-> Model-View-Controller 
-> Model-View-Presenter 
+> Model-View-Controller, 
+> Model-View-Presenter, 
 > Flux
 
 **Architectural Patterns**
 
 An architectural pattern is a general, reusable solution to a commonly occurring problem in software architecture within a given context.
 
-> Data Access Object 
+> Data Access Object, 
 > Service Layer
 
 **Integration Patterns**
 
 Integration patterns are concerned with how software applications communicate and exchange data.
 
-> Tolerant Reader 
-> Idioms 
-> Execute Around 
-> Poison Pill 
-> Callback
-> Lazy Loading
-> Double Dispatch
-> Resource Acquisition Is Initialization 
+> Tolerant Reader, 
+> Idioms, 
+> Execute Around, 
+> Poison Pill, 
+> Callback,
+> Lazy Loading,
+> Double Dispatch,
+> Resource Acquisition Is Initialization, 
 > Private Class Data
 
 **Abstract Factory ↑**
