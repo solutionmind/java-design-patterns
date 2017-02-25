@@ -1,92 +1,83 @@
 # java-design-patterns
 
-List of Design Patterns
+List of Design Patterns - 
 
 Creational Patterns
-
 Creational design patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed, and represented.
 
-Abstract Factory
-Builder
-Factory Method
-Prototype
-Property
-Singleton
-Multiton
-Object Pool
+•	Abstract Factory
+•	Builder
+•	Factory Method
+•	Prototype
+•	Property
+•	Singleton
+•	Multiton
+•	Object Pool
+
 Structural Patterns
-
 Structural patterns are concerned with how classes and objects are composed to form larger structures.
+•	Adapter
+•	Bridge
+•	Composite
+•	Decorator
+•	Facade
+•	Flyweight
+•	Proxy
+•	Service Locator
+•	Servant
+•	Event Aggregator
 
-Adapter
-Bridge
-Composite
-Decorator
-Facade
-Flyweight
-Proxy
-Service Locator
-Servant
-Event Aggregator
 Behavioral Patterns
-
 Behavioral patterns are concerned with algorithms and the assignment of responsibilites between objects.
+•	Chain of responsibility
+•	Command
+•	Interpreter
+•	Iterator
+•	Mediator
+•	Memento
+•	Observer
+•	State
+•	Strategy
+•	Template method
+•	Visitor
+•	Null Object
+•	Intercepting Filter
+•	Specification
+•	Dependency Injection
 
-Chain of responsibility
-Command
-Interpreter
-Iterator
-Mediator
-Memento
-Observer
-State
-Strategy
-Template method
-Visitor
-Null Object
-Intercepting Filter
-Specification
-Dependency Injection
 Concurrency Patterns
-
 Concurrency patterns are those types of design patterns that deal with the multi-threaded programming paradigm.
+•	Double Checked Locking
+•	Thread Pool
 
-Double Checked Locking
-Thread Pool
 Presentation Tier Patterns
-
 Presentation Tier patterns are the top-most level of the application, this is concerned with translating tasks and results to something the user can understand.
+•	Model-View-Controller
+•	Model-View-Presenter
+•	Flux
 
-Model-View-Controller
-Model-View-Presenter
-Flux
 Architectural Patterns
-
 An architectural pattern is a general, reusable solution to a commonly occurring problem in software architecture within a given context.
+•	Data Access Object
+•	Service Layer
 
-Data Access Object
-Service Layer
+
+
 Integration Patterns
-
 Integration patterns are concerned with how software applications communicate and exchange data.
-
-Tolerant Reader
-Idioms
-
+•	Tolerant Reader
+•	Idioms
 A programming idiom is a means of expressing a recurring construct in one or more programming languages. Generally speaking, a programming idiom is an expression of a simple task, algorithm, or data structure that is not a built-in feature in the programming language being used, or, conversely, the use of an unusual or notable feature that is built into a programming language. What distinguishes idioms from patterns is generally the size, the idioms tend to be something small while the patterns are larger.
-
-Execute Around
-Poison Pill
-Callback
-Lazy Loading
-Double Dispatch
-Resource Acquisition Is Initialization
-Private Class Data
+•	Execute Around
+•	Poison Pill
+•	Callback
+•	Lazy Loading
+•	Double Dispatch
+•	Resource Acquisition Is Initialization
+•	Private Class Data
 
 Abstract Factory ↑
-
 Intent: Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
-
 alt text
 
 Applicability: Use the Abstract Factory pattern when
