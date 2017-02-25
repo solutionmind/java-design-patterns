@@ -3,18 +3,14 @@
 List of Design Patterns - 
 
 Creational Patterns
+
 Creational design patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed, and represented.
 
-•	Abstract Factory
-•	Builder
-•	Factory Method
-•	Prototype
-•	Property
-•	Singleton
-•	Multiton
-•	Object Pool
+> Abstract Factory, Builder, Factory, Prototype, Singelton, Multiton, Object
+> Pool
 
 Structural Patterns
+
 Structural patterns are concerned with how classes and objects are composed to form larger structures.
 •	Adapter
 •	Bridge
@@ -28,6 +24,7 @@ Structural patterns are concerned with how classes and objects are composed to f
 •	Event Aggregator
 
 Behavioral Patterns
+
 Behavioral patterns are concerned with algorithms and the assignment of responsibilites between objects.
 •	Chain of responsibility
 •	Command
@@ -46,28 +43,32 @@ Behavioral patterns are concerned with algorithms and the assignment of responsi
 •	Dependency Injection
 
 Concurrency Patterns
+
 Concurrency patterns are those types of design patterns that deal with the multi-threaded programming paradigm.
 •	Double Checked Locking
 •	Thread Pool
 
 Presentation Tier Patterns
+
 Presentation Tier patterns are the top-most level of the application, this is concerned with translating tasks and results to something the user can understand.
 •	Model-View-Controller
 •	Model-View-Presenter
 •	Flux
 
 Architectural Patterns
+
 An architectural pattern is a general, reusable solution to a commonly occurring problem in software architecture within a given context.
 •	Data Access Object
 •	Service Layer
 
-
-
 Integration Patterns
+
 Integration patterns are concerned with how software applications communicate and exchange data.
 •	Tolerant Reader
 •	Idioms
+
 A programming idiom is a means of expressing a recurring construct in one or more programming languages. Generally speaking, a programming idiom is an expression of a simple task, algorithm, or data structure that is not a built-in feature in the programming language being used, or, conversely, the use of an unusual or notable feature that is built into a programming language. What distinguishes idioms from patterns is generally the size, the idioms tend to be something small while the patterns are larger.
+
 •	Execute Around
 •	Poison Pill
 •	Callback
@@ -78,14 +79,11 @@ A programming idiom is a means of expressing a recurring construct in one or mor
 
 Abstract Factory ↑
 Intent: Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
-alt text
 
 Applicability: Use the Abstract Factory pattern when
 
-a system should be independent of how its products are created, composed and represented
-a system should be configured with one of multiple families of products
-a family of related product objects is designed to be used together, and you need to enforce this constraint
-you want to provide a class library of products, and you want to reveal just their interfaces, not their implementations
+a system should be independent of how its products are created, composed and represented a system should be configured with one of multiple families of products a family of related product objects is designed to be used together, and you need to enforce this constraint you want to provide a class library of products, and you want to reveal just their interfaces, not their implementations
+
 Real world examples:
 
 javax.xml.parsers.DocumentBuilderFactory
@@ -94,51 +92,37 @@ Builder ↑
 
 Intent: Separate the construction of a complex object from its representation so that the same construction process can create different representations.
 
-alt text
+Applicability: Use the Builder pattern when the algorithm for creating a complex object should be independent of the parts that make up the object and how they're assembled the construction process must allow different representations for the object that's constructed
 
-Applicability: Use the Builder pattern when
-
-the algorithm for creating a complex object should be independent of the parts that make up the object and how they're assembled
-the construction process must allow different representations for the object that's constructed
 Real world examples:
 
 java.lang.StringBuilder
 Apache Camel builders
+
 Factory Method ↑
 
 Intent: Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 
-alt text
+Applicability: Use the Factory Method pattern when a class can't anticipate the class of objects it must create a class wants its subclasses to specify the objects it creates classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate
 
-Applicability: Use the Factory Method pattern when
-
-a class can't anticipate the class of objects it must create
-a class wants its subclasses to specify the objects it creates
-classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate
 Prototype ↑
 
 Intent: Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
 
-alt text
-
-Applicability: Use the Prototype pattern when a system should be independent of how its products are created, composed and represented; and
-
-when the classes to instantiate are specified at run-time, for example, by dynamic loading; or
+Applicability: Use the Prototype pattern when a system should be independent of how its products are created, composed and represented; and when the classes to instantiate are specified at run-time, for example, by dynamic loading; or
 to avoid building a class hierarchy of factories that parallels the class hierarchy of products; or
 when instances of a class can have one of only a few different combinations of state. It may be more convenient to install a corresponding number of prototypes and clone them rather than instantiating the class manually, each time with the appropriate state
+
 Real world examples:
 
 java.lang.Object#clone()
+
 Singleton ↑
 
 Intent: Ensure a class only has one instance, and provide a global point of access to it.
 
-alt text
+Applicability: Use the Singleton pattern when there must be exactly one instance of a class, and it must be accessible to clients from a well-known access point when the sole instance should be extensible by subclassing, and clients should be able to use an extended instance without modifying their code
 
-Applicability: Use the Singleton pattern when
-
-there must be exactly one instance of a class, and it must be accessible to clients from a well-known access point
-when the sole instance should be extensible by subclassing, and clients should be able to use an extended instance without modifying their code
 Typical Use Case:
 
 the logging class
@@ -147,52 +131,42 @@ file manager
 Real world examples:
 
 java.lang.Runtime#getRuntime()
+
 Adapter ↑
 
 Intent: Convert the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
 
-alt text
-
-Applicability: Use the Adapter pattern when
-
-you want to use an existing class, and its interface does not match the one you need
-you want to create a reusable class that cooperates with unrelated or unforeseen classes, that is, classes that don't necessarily have compatible interfaces
+Applicability: Use the Adapter pattern when you want to use an existing class, and its interface does not match the one you need you want to create a reusable class that cooperates with unrelated or unforeseen classes, that is, classes that don't necessarily have compatible interfaces
 you need to use several existing subclasses, but it's impractical to adapt their interface by subclassing every one. An object adapter can adapt the interface of its parent class.
+
 Real world examples:
 
 java.util.Arrays#asList()
+
 Bridge ↑
 
 Intent: Decouple an abstraction from its implementation so that the two can vary independently.
 
-alt text
-
-Applicability: Use the Bridge pattern when
-
-you want to avoid a permanent binding between an abstraction and its implementation. This might be the case, for example, when the implementation must be selected or switched at run-time.
+Applicability: Use the Bridge pattern when you want to avoid a permanent binding between an abstraction and its implementation. This might be the case, for example, when the implementation must be selected or switched at run-time.
 both the abstractions and their implementations should be extensible by subclassing. In this case, the Bridge pattern lets you combine the different abstractions and implementations and extend them independently
 changes in the implementation of an abstraction should have no impact on clients; that is, their code should not have to be recompiled.
 you have a proliferation of classes. Such a class hierarchy indicates the need for splitting an object into two parts. Rumbaugh uses the term "nested generalizations" to refer to such class hierarchies
 you want to share an implementation among multiple objects (perhaps using reference counting), and this fact should be hidden from the client. A simple example is Coplien's String class, in which multiple objects can share the same string representation.
+
 Composite ↑
 
 Intent: Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
-alt text
+Applicability: Use the Composite pattern when you want to represent part-whole hierarchies of objects you want clients to be able to ignore the difference between compositions of objects and individual objects. Clients will treat all objects in the composite structure uniformly
 
-Applicability: Use the Composite pattern when
-
-you want to represent part-whole hierarchies of objects
-you want clients to be able to ignore the difference between compositions of objects and individual objects. Clients will treat all objects in the composite structure uniformly
 Real world examples:
 
 java.awt.Container and java.awt.Component
 Apache Wicket component tree, see Component and MarkupContainer
+
 Decorator ↑
 
 Intent: Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
-
-alt text
 
 Applicability: Use Decorator
 
