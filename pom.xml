@@ -12,6 +12,7 @@
   	<module>singelton</module>
   	<module>builder</module>
   	<module>composite</module>
+  	<module>decorator</module>
   </modules>
   
     <build>
